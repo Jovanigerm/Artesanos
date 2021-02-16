@@ -43,7 +43,7 @@
   -->
     <div class="sidebar-wrapper" id="sidebar-wrapper">
       <ul class="nav">
-        <li class="active">
+        <li>
           <a href="/">
             <i class="fas fa-th-large"></i>
             <p>Inicio</p>
@@ -80,7 +80,7 @@
             <p>Alta de Pedidos</p>
           </a>
         </li>
-        <li>
+        <li class="active">
           <a href="./cliente.html">
             <i class="fas fa-users"></i>
             <p>Alta de Clientes</p>
@@ -109,24 +109,29 @@
           <span class="navbar-toggler-bar navbar-kebab"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
-          <form>
-            <div class="input-group no-border">
-              <input type="text" value="" class="form-control" placeholder="Buscar...">
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <i class="now-ui-icons ui-1_zoom-bold"></i>
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Buscar...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
     </nav>
-    <!-- End Navbar -->
     <div class="panel-header panel-header-sm">
     </div>
+    <div class="content" id="contenido">
+    @yield('contenido');
+    </div>
   </div>  
+</div>  
 </div>
+
+
 <!--   Core JS Files   -->
 <script src="/js/core/jquery.min.js"></script>
 <script src="/js/core/popper.min.js"></script>

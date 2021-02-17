@@ -16,27 +16,27 @@
               <div class="col-md-4 pr-1">
                 <div class="form-group">
                   <label>Nombre(s)</label>
-                  <input type="text" name="Nombre" id="Nombre" class="form-control" value="{{ old('Nombre') }}" placeholder="Nombre(s)">
-                  @if ($errors->first('Nombre'))
-                  <p class="text-danger">{{ $errors->first('Nombre') }}</p>
+                  <input type="text" name="Nombre_C" id="Nombre_C" class="form-control" value="{{ old('Nombre_C') }}" placeholder="Nombre(s)">
+                  @if ($errors->first('Nombre_C'))
+                  <p class="text-danger">{{ $errors->first('Nombre_C') }}</p>
                   @endif
                 </div>
               </div>
               <div class="col-md-4 pr-1">
                 <div class="form-group">
                   <label>Apellido paterno</label>
-                  <input type="text" name="Apellido_paterno" id="Apellido_paterno" class="form-control" value="{{ old('Apellido_paterno') }}" placeholder="Apellido paterno">
-                  @if ($errors->first('Apellido_paterno'))
-                  <p class="text-danger">{{ $errors->first('Apellido_paterno') }}</p>
+                  <input type="text" name="ApellidoP_C" id="ApellidoP_C" class="form-control" value="{{ old('ApellidoP_C') }}" placeholder="Apellido paterno">
+                  @if ($errors->first('ApellidoP_C'))
+                  <p class="text-danger">{{ $errors->first('ApellidoP_C') }}</p>
                   @endif
                 </div>
               </div>
               <div class="col-md-4 pr-1">
                 <div class="form-group">
                   <label>Apellido Materno</label>
-                  <input type="text" name="Apellido_materno" id="Apellido_materno" class="form-control" value="{{ old('Apellido_materno') }}" placeholder="Apellido Materno">
-                  @if ($errors->first('Apellido_materno'))
-                  <p class="text-danger">{{ $errors->first('Apellido_materno') }}</p>
+                  <input type="text" name="ApellidoM_C" id="ApellidoM_C" class="form-control" value="{{ old('ApellidoM_C') }}" placeholder="Apellido Materno">
+                  @if ($errors->first('ApellidoM_C'))
+                  <p class="text-danger">{{ $errors->first('ApellidoM_C') }}</p>
                   @endif
                 </div>
               </div>
@@ -45,18 +45,18 @@
                 <div class="col-md-3 pr-1">
                     <div class="form-group">
                         <label>Telefono</label>
-                        <input type="text" name="Telefono" id="Telefono" class="form-control" value="{{ old('Telefono') }}" placeholder="Telefono">
-                        @if ($errors->first('Telefono'))
-                        <p class="text-danger">{{ $errors->first('Telefono') }}</p>
+                        <input type="text" name="Telefono_C" id="Telefono_C" class="form-control" value="{{ old('Telefono_C') }}" placeholder="Telefono">
+                        @if ($errors->first('Telefono_C'))
+                        <p class="text-danger">{{ $errors->first('Telefono_C') }}</p>
                         @endif
                     </div>
                 </div>
                 <div class="col-md-3 pr-1">
                     <div class="form-group">
                         <label>Fecha de nacimiento</label>
-                        <input type="date" name="Fecha_de_nacimiento" id="Fecha_de_nacimiento" value="{{ old('Fecha_de_nacimiento') }}" class="form-control" placeholder="Fecha_de_nacimiento">
-                        @if ($errors->first('Fecha_de_nacimiento'))
-                        <p class="text-danger">{{ $errors->first('Fecha_de_nacimiento') }}</p>
+                        <input type="date" name="FechaNac_C" id="FechaNac_C" value="{{ old('FechaNac_C') }}" class="form-control">
+                        @if ($errors->first('FechaNac_C'))
+                        <p class="text-danger">{{ $errors->first('FechaNac_C') }}</p>
                         @endif
                     </div>
                 </div>
@@ -65,13 +65,13 @@
                         <label>Sexo</label> <br>
                         <div class="form-check form-check-radio form-check-inline">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Masculino" checked=""> Masculino
+                              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="H" checked=""> Masculino
                               <span class="form-check-sign"></span>
                             </label>
                           </div>
                           <div class="form-check form-check-radio form-check-inline">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Femenino"> Femenino
+                              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="M"> Femenino
                               <span class="form-check-sign"></span>
                             </label>
                         </div>
@@ -82,18 +82,18 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Correo</label>
-                        <input type="text" name="Correo" id="Correo" class="form-control" placeholder="Correo" value="{{ old('Correo') }}">
-                        @if ($errors->first('Correo'))
-                        <p class="text-danger">{{ $errors->first('Correo') }}</p>
+                        <input type="text" name="Correo_C" id="Correo_C" class="form-control" value="{{ old('Correo_C') }}" placeholder="Correo">
+                        @if ($errors->first('Correo_C'))
+                        <p class="text-danger">{{ $errors->first('Correo_C') }}</p>
                         @endif
                     </div>
                 </div>
                 <div class="col-md-6 pr-1">
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" name="Contraseña" id="Contraseña" class="form-control" placeholder="Contraseña">
-                        @if ($errors->first('Contraseña'))
-                        <p class="text-danger">{{ $errors->first('Contraseña') }}</p>
+                        <input type="password" name="Contraseña_C" id="Contraseña_C" class="form-control" placeholder="Contraseña">
+                        @if ($errors->first('Contraseña_C'))
+                        <p class="text-danger">{{ $errors->first('Contraseña_C') }}</p>
                         @endif
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Estado</label>
-                        <select name="Estado" id="Estado" class="form-control">
+                        <select name="Estado" id="idEstado" class="form-control">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -116,7 +116,7 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Municipio</label>
-                        <select name="Municipio" id="Municipio" class="form-control">
+                        <select name="Municipio" id="idMunicipio" class="form-control">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -127,9 +127,9 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Codigo postal</label>
-                        <input type="number" min="1" name="Codigo_postal" id="Codigo_postal" class="form-control" value="{{ old('Codigo_postal') }}" placeholder="Codigo postal">
-                        @if ($errors->first('Codigo_postal'))
-                        <p class="text-danger">{{ $errors->first('Codigo_postal') }}</p>
+                        <input type="number" min="1" name="CodigoPostal_C" id="CodigoPostal_C" class="form-control" value="{{ old('CodigoPostal_C') }}" placeholder="Codigo postal">
+                        @if ($errors->first('CodigoPostal_C'))
+                        <p class="text-danger">{{ $errors->first('CodigoPostal_C') }}</p>
                         @endif        
                     </div>
                 </div>
@@ -138,27 +138,27 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Colonia</label>
-                        <input type="text" name="Colonia" id="Colonia" class="form-control" value="{{ old('Colonia') }}" placeholder="Colonia">
-                        @if ($errors->first('Colonia'))
-                        <p class="text-danger">{{ $errors->first('Colonia') }}</p>
+                        <input type="text" name="Colonia_C" id="Colonia_C" class="form-control" value="{{ old('Colonia_C') }}" placeholder="Colonia">
+                        @if ($errors->first('Colonia_C'))
+                        <p class="text-danger">{{ $errors->first('Colonia_C') }}</p>
                         @endif        
                     </div>    
                 </div>
                 <div class="col-md-5 pr-1">
                     <div class="form-group">
                         <label>Calle</label>
-                        <input type="text" name="Calle" id="Calle" class="form-control" value="{{ old('Calle') }}" placeholder="Calle">
-                        @if ($errors->first('Calle'))
-                        <p class="text-danger">{{ $errors->first('Calle') }}</p>
+                        <input type="text" name="Calle_C" id="Calle_C" class="form-control" value="{{ old('Calle_C') }}" placeholder="Calle">
+                        @if ($errors->first('Calle_C'))
+                        <p class="text-danger">{{ $errors->first('Calle_C') }}</p>
                         @endif        
                     </div>
                 </div>
                 <div class="col-md-3 pr-1">
                     <div class="form-group">
                         <label>Numero de casa</label>
-                        <input type="number" min="1" name="Numero_de_casa" id="Numero_de_casa" value="{{ old('Numero_de_casa') }}" class="form-control" placeholder="Numero de casa">
-                        @if ($errors->first('Numero_de_casa'))
-                        <p class="text-danger">{{ $errors->first('Numero_de_casa') }}</p>
+                        <input type="number" min="1" name="Numero_C" id="Numero_C" value="{{ old('Numero_C') }}" class="form-control" placeholder="Numero de casa">
+                        @if ($errors->first('Numero_C'))
+                        <p class="text-danger">{{ $errors->first('Numero_C') }}</p>
                         @endif        
                     </div>
                 </div>

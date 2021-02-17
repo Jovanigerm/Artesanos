@@ -80,8 +80,8 @@
             <p>Alta de Pedidos</p>
           </a>
         </li>
-        <li class="active">
-          <a href="./cliente.html">
+        <li>
+          <a href="/altaclientes">
             <i class="fas fa-users"></i>
             <p>Alta de Clientes</p>
           </a>

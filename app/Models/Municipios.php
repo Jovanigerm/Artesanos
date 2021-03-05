@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Municipios extends Model
 {
     use HasFactory;
-    protected $primaryKey ='idMunicipio';
-    protected $fillable =['idMunicipio','NombreMunicipio','idEstado'];
+    protected $primaryKey = 'idmun';
+    protected $fillable =['idmun','NombreMunicipio','idest'];
 }

@@ -3,15 +3,25 @@
   <div class="row">
     <div class="col-md-12">
       <div class="card">
-        <div class="card-header">
-          <h5 class="title">Alta de clientes</h5>
-        </div>
-            <div class="dropdown-divider"></div>            
-            <div class="dropdown-divider"></div>
-            <h6 style="text-align: center">Datos relevantes del cliente</h6>            
         <div class="card-body">
           <form action="{{route('guardarclientes')}}" method="POST">
             {{ csrf_field() }}
+            <div class="row">
+                <div class="card-header col-md-10 pr-1">
+                    <div class="form-group">
+                        <h2 class="title">Alta de clientes</h2>
+                    </div>
+                </div>
+                <div class="col-md-2 pr-1">
+                    <div class="form-group">
+                        <label>Clave del cliente</label>
+                        <input type="text" name="idclie" id="idclie" class="form-control" value="{{ $idsiguiente }}" readonly style="text-align: center">
+                      </div>      
+                </div>
+            </div>
+            <div class="dropdown-divider"></div>            
+            <div class="dropdown-divider"></div>
+            <h6 style="text-align: center">Datos relevantes del cliente</h6>            
             <div class="row">
               <div class="col-md-4 pr-1">
                 <div class="form-group">
@@ -65,13 +75,13 @@
                         <label>Sexo</label> <br>
                         <div class="form-check form-check-radio form-check-inline">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="H" checked=""> Masculino
+                              <input class="form-check-input" type="radio" name="sexo" id="1" value="H" checked=""> Masculino
                               <span class="form-check-sign"></span>
                             </label>
                           </div>
                           <div class="form-check form-check-radio form-check-inline">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="M"> Femenino
+                              <input class="form-check-input" type="radio" name="sexo" id="2" value="M"> Femenino
                               <span class="form-check-sign"></span>
                             </label>
                         </div>
@@ -105,23 +115,26 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Estado</label>
-                        <select name="Estado" id="idEstado" class="form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                        <select name="Estado" id="idest" class="form-control">
+                            <option value="">--Selecciona--</option>
+                            @foreach($estado as $es)
+                            <option value="{{$es['idest']}}">{{$es['NombreEstado']}}</option>
+                            @endforeach
                         </select>
+                        @if ($errors->first('Estado'))
+                        <p class="text-danger">{{ $errors->first('Estado') }}</p>
+                        @endif      
                     </div>
                 </div>
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Municipio</label>
-                        <select name="Municipio" id="idMunicipio" class="form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                        <select name="Municipio" id="idmuni" class="form-control">
+                            <option value="">--Selecciona--</option>
                         </select>
+                        @if ($errors->first('Estado'))
+                        <p class="text-danger">{{ $errors->first('Estado') }}</p>
+                        @endif                        
                     </div>
                 </div>
                 <div class="col-md-4 pr-1">
@@ -173,12 +186,16 @@
                         @endif
                     </div>
                 </div>
-            <button type="submit" value="Guardar" class="btn btn-success col-md-12">Dar de Alta</button>
+            </div>    
+            <div class="row">
+                <div class="col-md-12 pr-1">
+                    <button type="submit" value="Guardar" class="btn btn-success col-md-12">Dar de Alta</button>
+                </div>
             </div>
         </form>
         </div>
       </div>
     </div>
   </div>
-
+<script src="/js/municipios.js"></script>
 @endsection

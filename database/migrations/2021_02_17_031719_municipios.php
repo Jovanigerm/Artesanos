@@ -14,11 +14,10 @@ class Municipios extends Migration
     public function up()
     {
       Schema::create('municipios', function (Blueprint $table) {
-          $table->increments('idMunicipio');
+          $table->increments('idmun');
           $table->string('NombreMunicipio', 50);
-          $table->integer('idEstado')->unsigned();
-          $table->foreign('idEstado')->reference('idEstado')->on('estados');
-          $table->rememberToken();                      
+          $table->integer('idest')->unsigned();
+          $table->foreign('idest')->references('idest')->on('estados');
       });
     }
 
